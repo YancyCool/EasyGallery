@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:id="@+id/gallery_title_bar"
+        android:background="@android:color/black"
+        >
+        <ImageView 
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/back"
+            android:id="@+id/gallery_back"
+            />
+        <TextView 
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:gravity="left|center_vertical"
+            android:layout_toRightOf="@id/gallery_back"
+            android:layout_toLeftOf="@+id/gallery_choose_folder"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/gallery_choose_folder"
+            />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical" 
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:id="@id/gallery_choose_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/gallery_choose_folder"
+            />
+    </RelativeLayout>
+	<GridView
+	    android:layout_below="@id/gallery_title_bar"
+        android:id="@+id/gallry_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:listSelector="@null"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dp" />
+</RelativeLayout>
