@@ -1,5 +1,0 @@
-EasyGallery
-===========
-
-Android Gallery  
-
